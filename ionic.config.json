@@ -1,0 +1,7 @@
+{
+  "name": "neoIonic",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

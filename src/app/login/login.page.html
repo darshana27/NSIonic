@@ -1,0 +1,48 @@
+<ion-content padding center text-center>
+  <div class="container">
+    <h1 class="neoHeading">NeoSTORE</h1>
+    <div class="ionItem">
+      <ion-label>
+        <ion-icon name="person"></ion-icon>
+      </ion-label>
+      <ion-input [(ngModel)]="uname" class="text-input" placeholder="Username"></ion-input>
+    </div>
+    <div class="ionItem">
+      <ion-label>
+        <ion-icon name="lock"></ion-icon>
+      </ion-label>
+      <ion-input [(ngModel)]="password" class="text-input" placeholder="Password"></ion-input>
+    </div>
+    <ion-button class="btnLogin" color="light" expand="block" (click)="onLogin()">
+      LOGIN
+    </ion-button>
+    <ion-label class="txtForgot" [routerLink]="['/forgotpwd']">Forgot Password?</ion-label>
+  </div>
+</ion-content>
+<ion-footer class="footer" [ngStyle]="{ 'background-color': '#E91C1A' }">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-title>DON'T HAVE AN ACCOUNT? </ion-title>
+      </ion-col>
+      <ion-col>
+        <ion-buttons>
+          <ion-button [ngStyle]="{
+                'background-color': '#e91c1a',
+                width: '12vw',
+                display: 'flex',
+                'border-radius': '0px',
+                'align-items': 'center',
+                'justify-content': 'center'
+              }"
+            (click)="onRegister()">
+            <!-- <ion-item routerLink='/register' routerDirection="root"> -->
+            <ion-icon class="add" name="add"></ion-icon>
+
+
+          </ion-button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

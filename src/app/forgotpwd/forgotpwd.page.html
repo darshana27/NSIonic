@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-buttons slot="start">
+    <ion-button (click)="goBack()">
+      <ion-icon name="arrow-round-back"></ion-icon>
+    </ion-button>
+
+  </ion-buttons>
+  <ion-title>
+    Forgot Password
+  </ion-title>
+
+</ion-header>
+<ion-content padding center text-center>
+  <div class="container">
+    <h1 class="neoHeading">NeoSTORE</h1>
+    <div class="ionItem">
+      <ion-label>
+        <ion-icon name="person"></ion-icon>
+      </ion-label>
+      <ion-input [(ngModel)]="uname" class="text-input" placeholder="Username"></ion-input>
+    </div>
+
+    <ion-button class="btnLogin" color="light" expand="block" (click)="onLogin()">
+      SEND PASSWORD
+    </ion-button>
+  </div>
+</ion-content>

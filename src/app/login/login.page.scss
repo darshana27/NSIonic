@@ -1,0 +1,96 @@
+ion-label {
+    display: inline;
+    height: 8vh;
+    align-items: center;
+    justify-content: center;
+}
+
+ion-icon {
+    color: #fff;
+    margin-top: 2.5vh;
+    margin-left: 1vw;
+}
+
+ion-input {
+    display: inline-block;
+    color: #fff;
+}
+
+.neoHeading {
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+ion-content {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    --ion-background-color: #e91c1a;
+}
+
+.container {
+    margin-top: 30%;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.btnLogin {
+    margin-top: 20px;
+    background-color: #fff;
+    color: #e91c1a;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+ion-title {
+    font-size: 13px;
+}
+
+ion-col {
+    display: contents;
+}
+
+ion-footer {
+    background-color: #e91c1a !important;
+    color: #fff;
+}
+
+.toolbar-background {
+    background-color: #e91c1a !important;
+}
+
+.add {
+    margin-top: 0.5vh;
+}
+
+.txtForgot {
+    color: #fff;
+}
+
+ion-col ion-buttons .btnAdd ion-ripple-effect {
+    background-color: #e91c1a;
+    color: #fff;
+}
+
+.ionItem {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #fff;
+    margin-top: 12px;
+}
+
+ion-input {
+    text-align: -webkit-left;
+    text-align: left;
+}
+
+// :host(.input-wrapper) {
+//     min-height: 26px;
+// }
+
+// .input-wrapper {
+//     height: 30px !important;
+//     border: 1px solid #fff;
+
+// }
