@@ -1,1 +1,37 @@
+ion-item-options {
+  align-items: center;
+}
 
+.pname {
+  color: #4f4f4f;
+  font-size: 13px;
+}
+
+.pproducer {
+  font-size: 9px;
+}
+
+.pcost {
+  margin-top: 10px;
+  color: #fe4040;
+}
+
+.deleteBtn {
+  border-radius: 50%;
+}
+
+.costrating {
+  display: flex;
+  width: 71vw;
+}
+
+.costDiv {
+  width: 62px;
+}
+
+.rating {
+  display: block;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: 10px;
+}

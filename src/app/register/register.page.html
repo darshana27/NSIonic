@@ -19,20 +19,20 @@
       <ion-label>
         <ion-icon name="person"></ion-icon>
       </ion-label>
-      <ion-input [(ngModel)]="uname" class="text-input" placeholder="First Name"></ion-input>
+      <ion-input [(ngModel)]="fname" class="text-input" placeholder="First Name"></ion-input>
     </div>
     <div class="ionItem">
       <ion-label>
         <ion-icon name="person"></ion-icon>
       </ion-label>
-      <ion-input [(ngModel)]="password" class="text-input" placeholder="Last Name"></ion-input>
+      <ion-input [(ngModel)]="lname" class="text-input" placeholder="Last Name"></ion-input>
 
     </div>
     <div class="ionItem">
       <ion-label>
         <ion-icon name="mail"></ion-icon>
       </ion-label>
-      <ion-input [(ngModel)]="uname" class="text-input" placeholder="Email"></ion-input>
+      <ion-input [(ngModel)]="email" class="text-input" placeholder="Email"></ion-input>
     </div>
     <div class="ionItem">
       <ion-label>
@@ -44,11 +44,11 @@
       <ion-label>
         <ion-icon name="lock"></ion-icon>
       </ion-label>
-      <ion-input [(ngModel)]="uname" class="text-input" placeholder="Confirm Password"></ion-input>
+      <ion-input [(ngModel)]="cpassword" class="text-input" placeholder="Confirm Password"></ion-input>
     </div>
 
     <ion-row>
-      <ion-radio-group>
+      <ion-radio-group [(ngModel)]="gender">
         <ion-col>
           Gender: &nbsp;&nbsp;
         </ion-col>
@@ -67,14 +67,14 @@
       <ion-label>
         <ion-icon name="phone-portrait"></ion-icon>
       </ion-label>
-      <ion-input class="text-input" placeholder="Phone No"></ion-input>
+      <ion-input [(ngModel)]="phone" class="text-input" placeholder="Phone No"></ion-input>
     </div>
     <ion-item class="check">
       <ion-checkbox color="light"></ion-checkbox> &nbsp;
       <ion-label class="tandc">I agree the terms & conditions.</ion-label>
     </ion-item>
 
-    <ion-button class="btnLogin" color="light" expand="block" (click)="onLogin()">
+    <ion-button class="btnLogin" color="light" expand="block" (click)="onRegister()">
       REGISTER
     </ion-button>
   </div>

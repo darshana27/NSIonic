@@ -2,3 +2,62 @@
   max-height: 35vh;
   overflow: hidden;
 }
+
+ion-slide img {
+  height: 45vh;
+  display: block;
+  width: 100%;
+}
+
+.cardsContainer {
+  height: 43%;
+}
+
+.ionrow {
+  height: 50%;
+}
+
+.ioncol {
+  // border: 1px solid cyan;
+  width: 50%;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ioncard {
+  // border: 1px solid red;
+  height: 90%;
+  width: 90%;
+  background-color: #bb0100;
+}
+
+.pchair,
+.ptable,
+.psofa,
+.pcupboard {
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.ptable {
+  margin-left: 55%;
+  margin-bottom: 23%;
+}
+
+.psofa {
+  margin-left: 10%;
+  margin-top: 43%;
+}
+
+.pchair {
+  margin-left: 10%;
+  margin-bottom: 23%;
+}
+
+.pcupboard {
+  margin-left: 10%;
+  margin-top: 47%;
+}

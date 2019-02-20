@@ -1,39 +1,45 @@
-import { Component, OnInit } from '@angular/core';
+import { RatingComponent } from "../components/rating/rating.component";
+import { Component, OnInit } from "@angular/core";
+import { Observable } from "rxjs/Observable";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { ApiService } from "../api.service";
 
 @Component({
-  selector: 'app-list',
-  templateUrl: 'list.page.html',
-  styleUrls: ['list.page.scss']
+  selector: "app-list",
+  templateUrl: "list.page.html",
+  styleUrls: ["list.page.scss"]
 })
 export class ListPage implements OnInit {
-  private selectedItem: any;
-  private icons = [
-    'flask',
-    'wifi',
-    'beer',
-    'football',
-    'basketball',
-    'paper-plane',
-    'american-football',
-    'boat',
-    'bluetooth',
-    'build'
-  ];
+  products: any;
+  res: Observable<any>;
+
   public items: Array<{ title: string; note: string; icon: string }> = [];
-  constructor() {
-    for (let i = 1; i < 11; i++) {
-      this.items.push({
-        title: 'Item ' + i,
-        note: 'This is item #' + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-      });
-    }
-  }
+  constructor(public httpClient: HttpClient, public api: ApiService) {}
 
   ngOnInit() {
+    let headers = new HttpHeaders({
+      "Content-Type": "application/text"
+    });
+    console.log("***********", headers);
+    this.api.fetchApi(
+      "http://staging.php-dev.in:8844/trainingapp/api/products/getList?product_category_id=1",
+      "GET",
+      null,
+      headers,
+      this.callback
+    );
   }
-  // add back when alpha.4 is out
-  // navigate(item) {
-  //   this.router.navigate(['/list', JSON.stringify(item)]);
-  // }
+  callback = response => {
+    console.log("Callback response: ", response.data);
+    this.products = response.data;
+  };
 }
+
+// this.products = this.httpClient.get(
+//   "http://staging.php-dev.in:8844/trainingapp/api/products/getList?product_category_id=1",
+//   { responseType: "text", headers }
+// );
+// this.products.subscribe(data => {
+//   console.log(JSON.parse(data));
+//   this.res = JSON.parse(data);
+// });
